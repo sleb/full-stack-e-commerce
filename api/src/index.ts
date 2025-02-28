@@ -1,14 +1,12 @@
-import express from "express";
+import express, { json, urlencoded } from "express";
 import products from "./routes/products";
 
 const port = 3000;
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
+app.use(urlencoded({ extended: false }));
+app.use(json());
 app.use("/products", products);
 
 app.listen(port, () => {
