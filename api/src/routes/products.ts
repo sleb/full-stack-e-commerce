@@ -9,10 +9,10 @@ import {
 
 const products = Router();
 
-products.get("/", (req, res) => listProducts(req, res));
-products.get("/:id", (req, res) => getProduct(req, res));
-products.post("/", (req, res) => createProduct(req, res));
-products.delete("/:id", (req, res) => deleteProduct(req, res));
-products.put("/:id", (req, res) => updateProduct(req, res));
+products.get("/", listProducts);
+products.get("/:id", getProduct);
+products.post("/", createProduct);
+products.delete("/:id", deleteProduct);
+products.put("/:id", updateProduct);
 
 export default products;
