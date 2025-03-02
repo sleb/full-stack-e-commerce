@@ -11,10 +11,6 @@
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
     "noEmit": false,
-    "isolatedModules": true,
-    "baseUrl": ".",
-    "paths": {
-      "*": ["node_modules/*"]
-    }
+    "isolatedModules": true
   }
 }
